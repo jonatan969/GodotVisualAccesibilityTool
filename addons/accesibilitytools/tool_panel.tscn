@@ -1,0 +1,214 @@
+[gd_scene load_steps=3 format=3 uid="uid://bku3gp65xgd4e"]
+
+[ext_resource type="Script" path="res://addons/accesibilitytools/tool_panel.gd" id="1_fnqcc"]
+[ext_resource type="Script" path="res://addons/accesibilitytools/addon_resource_picker.gd" id="2_s0wbp"]
+
+[node name="ToolPanel" type="ScrollContainer"]
+offset_right = 191.0
+offset_bottom = 622.0
+script = ExtResource("1_fnqcc")
+
+[node name="ToolManu" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="iAccesibilidad" type="Label" parent="ToolManu"]
+layout_mode = 2
+text = "Accesibility Tool"
+horizontal_alignment = 1
+
+[node name="hsImportant" type="HSeparator" parent="ToolManu"]
+layout_mode = 2
+
+[node name="iImportante" type="Label" parent="ToolManu"]
+layout_mode = 2
+text = "¡IMPORTANT!"
+horizontal_alignment = 1
+
+[node name="bAutoload" type="Button" parent="ToolManu"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Generate AutoLoad"
+
+[node name="HSeparadorAcce" type="HSeparator" parent="ToolManu"]
+layout_mode = 2
+
+[node name="lDaltonismo" type="Label" parent="ToolManu"]
+layout_mode = 2
+text = "Color Blind"
+horizontal_alignment = 1
+
+[node name="cbDaltonismo" type="CheckButton" parent="ToolManu"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Enable Option"
+
+[node name="HSeparator2" type="HSeparator" parent="ToolManu"]
+layout_mode = 2
+
+[node name="lRemplazarColor" type="Label" parent="ToolManu"]
+layout_mode = 2
+text = "Replace Color"
+horizontal_alignment = 1
+
+[node name="cbReplaceColor" type="CheckButton" parent="ToolManu"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Enable Option"
+
+[node name="vbReplaceColor" type="VBoxContainer" parent="ToolManu"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="lObjetoReemplazo" type="Label" parent="ToolManu/vbReplaceColor"]
+layout_mode = 2
+text = "Object"
+horizontal_alignment = 1
+
+[node name="arpReplaceColor" type="EditorResourcePicker" parent="ToolManu/vbReplaceColor"]
+unique_name_in_owner = true
+layout_mode = 2
+base_type = "PackedScene"
+script = ExtResource("2_s0wbp")
+
+[node name="lColorReemplazo" type="Label" parent="ToolManu/vbReplaceColor"]
+layout_mode = 2
+text = "Color"
+horizontal_alignment = 1
+
+[node name="cpReplaceColor" type="ColorPickerButton" parent="ToolManu/vbReplaceColor"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Selecionar color"
+
+[node name="lNameReplaceColor" type="Label" parent="ToolManu/vbReplaceColor"]
+layout_mode = 2
+text = "Name"
+horizontal_alignment = 1
+
+[node name="leReplaceColor" type="LineEdit" parent="ToolManu/vbReplaceColor"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="lListReplace" type="Label" parent="ToolManu/vbReplaceColor"]
+layout_mode = 2
+text = "Replace Color List"
+horizontal_alignment = 1
+
+[node name="ilReplaceColor" type="ItemList" parent="ToolManu/vbReplaceColor"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+auto_height = true
+
+[node name="bAddReplaceColor" type="Button" parent="ToolManu/vbReplaceColor"]
+layout_mode = 2
+text = "Save"
+
+[node name="bShowMatriz" type="Button" parent="ToolManu/vbReplaceColor"]
+layout_mode = 2
+text = "Show List"
+
+[node name="bDeleteReplace" type="Button" parent="ToolManu/vbReplaceColor"]
+layout_mode = 2
+text = "Delete"
+
+[node name="HSeparator3" type="HSeparator" parent="ToolManu"]
+layout_mode = 2
+
+[node name="lBordeObjetos" type="Label" parent="ToolManu"]
+layout_mode = 2
+text = "Glow Objects"
+horizontal_alignment = 1
+
+[node name="cbGlowObject" type="CheckButton" parent="ToolManu"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Enable Option"
+
+[node name="vbGlowObject" type="VBoxContainer" parent="ToolManu"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="ToolManu/vbGlowObject"]
+layout_mode = 2
+
+[node name="lGlowObject" type="Label" parent="ToolManu/vbGlowObject"]
+layout_mode = 2
+text = "Object"
+horizontal_alignment = 1
+
+[node name="arpSceneGlow" type="EditorResourcePicker" parent="ToolManu/vbGlowObject"]
+unique_name_in_owner = true
+layout_mode = 2
+base_type = "PackedScene"
+script = ExtResource("2_s0wbp")
+
+[node name="lGlowEffect" type="Label" parent="ToolManu/vbGlowObject"]
+layout_mode = 2
+text = "Glow Effect"
+horizontal_alignment = 1
+
+[node name="opGlowEffect" type="OptionButton" parent="ToolManu/vbGlowObject"]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Shine"
+popup/item_0/id = 0
+popup/item_1/text = "Metalic"
+popup/item_1/id = 1
+
+[node name="lNameObjectGlow" type="Label" parent="ToolManu/vbGlowObject"]
+layout_mode = 2
+text = "Name"
+horizontal_alignment = 1
+
+[node name="leGlowObject" type="LineEdit" parent="ToolManu/vbGlowObject"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="lGlowObjectList" type="Label" parent="ToolManu/vbGlowObject"]
+layout_mode = 2
+text = "Glow Objects List"
+horizontal_alignment = 1
+
+[node name="ilGlowObjects" type="ItemList" parent="ToolManu/vbGlowObject"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+auto_height = true
+
+[node name="bSaveGlow" type="Button" parent="ToolManu/vbGlowObject"]
+layout_mode = 2
+text = "Save
+"
+
+[node name="bShowListGlow" type="Button" parent="ToolManu/vbGlowObject"]
+layout_mode = 2
+text = "Show List"
+
+[node name="bDeleteGlow" type="Button" parent="ToolManu/vbGlowObject"]
+layout_mode = 2
+text = "Delete"
+
+[node name="HSeparator4" type="HSeparator" parent="ToolManu"]
+layout_mode = 2
+
+[node name="bGenerador" type="Button" parent="ToolManu"]
+layout_mode = 2
+text = "Generate Menu"
+
+[connection signal="pressed" from="ToolManu/bAutoload" to="." method="_on_b_autoload_pressed"]
+[connection signal="toggled" from="ToolManu/cbDaltonismo" to="." method="_on_cb_daltonismo_toggled"]
+[connection signal="toggled" from="ToolManu/cbReplaceColor" to="." method="_on_cb_replace_color_toggled"]
+[connection signal="resource_changed" from="ToolManu/vbReplaceColor/arpReplaceColor" to="." method="_on_arp_replace_color_resource_changed"]
+[connection signal="pressed" from="ToolManu/vbReplaceColor/bAddReplaceColor" to="." method="_on_b_add_replace_color_pressed"]
+[connection signal="pressed" from="ToolManu/vbReplaceColor/bShowMatriz" to="." method="_on_b_show_matriz_pressed"]
+[connection signal="pressed" from="ToolManu/vbReplaceColor/bDeleteReplace" to="." method="_on_b_delete_replace_pressed"]
+[connection signal="toggled" from="ToolManu/cbGlowObject" to="." method="_on_cb_glide_object_toggled"]
+[connection signal="resource_changed" from="ToolManu/vbGlowObject/arpSceneGlow" to="." method="_on_arp_scene_glow_resource_changed"]
+[connection signal="pressed" from="ToolManu/vbGlowObject/bSaveGlow" to="." method="_on_b_save_glow_pressed"]
+[connection signal="pressed" from="ToolManu/vbGlowObject/bShowListGlow" to="." method="_on_b_show_list_glow_pressed"]
+[connection signal="pressed" from="ToolManu/vbGlowObject/bDeleteGlow" to="." method="_on_b_delete_glow_pressed"]
+[connection signal="pressed" from="ToolManu/bGenerador" to="." method="_on_b_generador_pressed"]
