@@ -320,7 +320,7 @@ void fragment() {
 			scene.material = shader_material  # Asigna el material al padre
 			# Recorrer los nodos hijos y activar 'use_parent_material' si es posible
 			for child in scene.get_children():
-				if child is Sprite2D or child is Sprite3D or child is MeshInstance3D:
+				if child is Sprite2D or child is Sprite3D or child is MeshInstance3D or AnimatedSprite2D or AnimatedSprite3D:
 					child.use_parent_material = true
 
 			print("Shader aplicado al nodo padre de la escena:", scene_path)
@@ -496,7 +496,7 @@ void fragment() {
 			scene.material = shader_material  # Asigna el material al padre
 			# Recorrer los nodos hijos y activar 'use_parent_material' si es posible
 			for child in scene.get_children():
-				if child is Sprite2D or child is Sprite3D or child is MeshInstance3D:
+				if child is Sprite2D or child is Sprite3D or child is MeshInstance3D or AnimatedSprite2D or AnimatedSprite3D:
 					child.use_parent_material = true
 
 			print("Shader applied to the parent node of the scene:", scene_path)
